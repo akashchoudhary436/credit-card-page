@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Card */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-header h2 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.card-header p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.card-header img {
+    height: 80px;
+    border-radius: 6px;
+}
+
+/* Feature rows */
+.feature {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.feature:last-child {
+    border-bottom: none;
+}
+
+.feature i {
+    background: #f59e0b;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+.feature h4 {
+    font-size: 1rem;
+}
+
+.feature p {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* Button */
+.cta {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
