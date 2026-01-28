@@ -3,100 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Petals Signup</title>
+
     <style>
-         *{
-            padding: 0px;
-            margin: 0px;
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         }
-        .parentbox{
-            height: 250vh;
+
+        body {
+            background: #f5f6f7;
+            min-height: 100vh;
+        }
+
+        /* PARENT */
+        .parentbox {
             width: 100%;
-            border: 1px solid black;
-            background-color: antiquewhite;
-            display: flex;
-            justify-content: center;
-            align-items: start;
-        }
-        .childbox{
-            height: 80%;
-            width: 40%;
-            
-            border-radius: 20px;
-            background-color: lightblue;
-            box-shadow: 20px grey;
-            
-        }
-    
-        .childbox1{
-            height: 30vh;
-            width: 100%;
-            
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            padding-left: 20px;
-            
+            padding: 20px;
         }
-        .childbox2{
-            height: 55vh;
-            width: 100%;
-            
-            display: flex;
-            justify-content: start;
-            align-items: center;  
-            flex-direction: column; 
-        }
-        .log{
-            height: 100vh;
-            width: 100%;
-            
-            padding-left: 110px;
-            padding-top: 50px;
-        }
-        .txt{
-            border: 0;
-            width: 80%;
-            height: 40%px;
-            padding: 10px;
-            border-radius: 10px;
 
+        /* CARD */
+        .childbox {
+            width: 100%;
+            max-width: 420px;
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            overflow: hidden;
         }
-       .btn{
-        border: 0;
-        height: 20px;
-        width: 80%;
-        background-color: lightgreen;
-       }
+
+        /* HEADER */
+        .childbox1 {
+            padding: 32px 24px 20px;
+            text-align: center;
+        }
+
+        .childbox1 h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .childbox1 p {
+            margin-top: 10px;
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* IMAGE SECTION */
+        .childbox2 {
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .childbox2 img {
+            max-width: 160px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .childbox2 h5 {
+            font-size: 0.85rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        /* FORM */
+        .log {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .txt {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 0.95rem;
+            background: #fafafa;
+        }
+
+        .txt:focus {
+            outline: none;
+            border-color: #4f46e5;
+            background: #fff;
+        }
+
+        /* BUTTON */
+        .btn {
+            margin-top: 10px;
+            padding: 14px;
+            border-radius: 10px;
+            border: none;
+            background: #4f46e5;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* DESKTOP */
+        @media (min-width: 768px) {
+            .childbox {
+                max-width: 480px;
+            }
+
+            .childbox1 h1 {
+                font-size: 2.2rem;
+            }
+        }
     </style>
 </head>
-<body>
-    <div class="parentbox">
-        <div class="childbox">
-            <div class="childbox1">
-            <h1>Petals</h1><br>
-            <p>See which Petal card is right for you with no impact to your credit score.</p></div>
-            <div class="childbox2">
-                <img src="./petal image.svg" alt="">
-                <h5>click here to see more information</h5>
-            </div>
-            <div class="log">
-                <input type="text" class="txt" id="" placeholder="Enter your username" required ><br><br>
-                <input type="email" class="txt" name="" id="" placeholder="Enter your email"><br><br>
-                <input type="text" class="txt"  placeholder="enter your legal first name" required><br><br>
-                <input type="text" class="txt" placeholder="enter your legal last name" required><br><br>
-                <input type="tel" class="txt" placeholder="Enter your phone number" ><br><br>
-                <input type="text" class="txt" placeholder="Enter your street adress"><br><br>
-                <input type="text" class="txt" name="" id="" placeholder="city" ><br><br>
-                <input type="text" class="txt" placeholder="state"><br><br>
-                <input type="number" class="txt" placeholder="zipcode"><br><br>
-                <button class="btn">Continue</button>
 
-            </div>
+<body>
+
+<div class="parentbox">
+    <div class="childbox">
+
+        <div class="childbox1">
+            <h1>Petals</h1>
+            <p>
+                See which Petal card is right for you with no impact to your credit score.
+            </p>
         </div>
+
+        <div class="childbox2">
+            <img src="./petal image.svg" alt="Petal Card">
+            <h5>Click here to see more information</h5>
+        </div>
+
+        <div class="log">
+            <input type="text" class="txt" placeholder="Username" required>
+            <input type="email" class="txt" placeholder="Email address" required>
+            <input type="text" class="txt" placeholder="Legal first name" required>
+            <input type="text" class="txt" placeholder="Legal last name" required>
+            <input type="tel" class="txt" placeholder="Phone number">
+            <input type="text" class="txt" placeholder="Street address">
+            <input type="text" class="txt" placeholder="City">
+            <input type="text" class="txt" placeholder="State">
+            <input type="number" class="txt" placeholder="Zip code">
+
+            <button class="btn">Continue</button>
+        </div>
+
     </div>
-    
+</div>
+
 </body>
 </html>
