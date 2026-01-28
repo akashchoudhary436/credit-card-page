@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .parentbox{
+            height: 250vh;
+            width: 100%;
+            border: 1px solid black;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        }
+        .childbox{
+            height: 80%;
+            width: 40%;
+            
+            border-radius: 20px;
+            background-color: lightblue;
+            box-shadow: 20px grey;
+            
+        }
+    
+        .childbox1{
+            height: 30vh;
+            width: 100%;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-left: 20px;
+            
+        }
+        .childbox2{
+            height: 55vh;
+            width: 100%;
+            
+            display: flex;
+            justify-content: start;
+            align-items: center;  
+            flex-direction: column; 
+        }
+        .log{
+            height: 100vh;
+            width: 100%;
+            
+            padding-left: 110px;
+            padding-top: 50px;
+        }
+        .txt{
+            border: 0;
+            width: 80%;
+            height: 40%px;
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+       .btn{
+        border: 0;
+        height: 20px;
+        width: 80%;
+        background-color: lightgreen;
+       }
+    </style>
+</head>
+<body>
+    <div class="parentbox">
+        <div class="childbox">
+            <div class="childbox1">
+            <h1>Petals</h1><br>
+            <p>See which Petal card is right for you with no impact to your credit score.</p></div>
+            <div class="childbox2">
+                <img src="./petal image.svg" alt="">
+                <h5>click here to see more information</h5>
+            </div>
+            <div class="log">
+                <input type="text" class="txt" id="" placeholder="Enter your username" required ><br><br>
+                <input type="email" class="txt" name="" id="" placeholder="Enter your email"><br><br>
+                <input type="text" class="txt"  placeholder="enter your legal first name" required><br><br>
+                <input type="text" class="txt" placeholder="enter your legal last name" required><br><br>
+                <input type="tel" class="txt" placeholder="Enter your phone number" ><br><br>
+                <input type="text" class="txt" placeholder="Enter your street adress"><br><br>
+                <input type="text" class="txt" name="" id="" placeholder="city" ><br><br>
+                <input type="text" class="txt" placeholder="state"><br><br>
+                <input type="number" class="txt" placeholder="zipcode"><br><br>
+                <button class="btn">Continue</button>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
